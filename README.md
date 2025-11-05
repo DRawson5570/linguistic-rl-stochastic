@@ -7,6 +7,17 @@
 
 ---
 
+## ⚠️ STATUS: Research Vision / Future Work
+
+**This repository documents a conceptual approach—not yet tested in practice.**
+
+**For the working self-modification system** (proven on math problems):
+👉 **[self-modifying-lora](https://github.com/DRawson5570/self-modifying-lora)** (20% → 45% in 21 minutes!)
+
+**This repo** extends that architecture to stochastic environments (financial markets).
+
+---
+
 ## 🎯 The Core Problem
 
 Traditional Reinforcement Learning fails in stochastic environments (financial markets, robotics, medical diagnosis) because:
@@ -47,7 +58,9 @@ The model leverages its pretrained knowledge about regimes, diversification, and
 
 ---
 
-## 📊 Example: Trading AI Evolution
+## 📊 Hypothetical Example: Trading AI Evolution
+
+**Note: This is the expected behavior—not yet experimentally validated.**
 
 ### Generation 0 (Naive):
 ```
@@ -104,46 +117,62 @@ Building on [Linguistic RL](https://github.com/DRawson5570/linguistic-rl), we ad
 
 ## 🚀 Quick Start
 
-### Installation
+### ⚠️ For Working Code, Use the Other Repo!
+
+**This repo is conceptual.** For the working self-modification system:
 
 ```bash
-git clone https://github.com/DRawson5570/linguistic-rl-stochastic.git
-cd linguistic-rl-stochastic
+# Clone the proven system (math problems, 20% → 45%)
+git clone https://github.com/DRawson5570/self-modifying-lora.git
+cd self-modifying-lora
 pip install -r requirements.txt
-```
 
-### Run Self-Modifying Demo
-
-```bash
 # Requires Ollama with qwen2.5:3b
 ollama pull qwen2.5:3b
 
 # Run autonomous self-improvement
-python real_self_modifying_lora.py
+python self_modifying_lora.py
 ```
 
-### Test Linguistic RL vs Baseline
+### Exploring This Repo (Conceptual)
 
 ```bash
-# Compare in-context learning vs baseline
-python test_with_journal.py
+# Clone to explore the stochastic environment design
+git clone https://github.com/DRawson5570/linguistic-rl-stochastic.git
+cd linguistic-rl-stochastic
+
+# Read the discovery notes
+cat STOCHASTIC_ENVIRONMENTS_DISCOVERY.md
+
+# (Trading implementation coming soon)
 ```
 
 ---
 
-## 📈 Results
+## � Status
 
-### Self-Modification Experiment (Math Problems):
-- **Gen 0 → Gen 2: 20% → 45% accuracy (+125% improvement!)**
-- **Autonomous improvement**: System successfully self-modifies without human intervention
-- **21 minutes total**: Practical timescale for recursive self-improvement
-- **Architecture proven**: Self-triggered LoRA training works in practice
-- **Key insight**: Temporary performance dip (Gen 1) before breakthrough (Gen 2)
+### ⚠️ This is a Research Vision / Future Work
 
-### Stochastic Environment Framing (Trading - In Progress):
-- Applying natural language regime-awareness to financial markets
-- Testing across multiple market regimes (2020-2024)
-- Goal: Profitable performance across bull, bear, and range-bound periods
+**What's Here:**
+- Discovery notes on natural language framing for stochastic environments
+- System prompt designs for regime-aware learning
+- Conceptual architecture for trading AI
+- Research roadmap and hypothesis
+
+**What's NOT Here (Yet):**
+- Actual trading experiments
+- Market regime testing
+- Real-world validation
+
+### ✅ Self-Modification Proven Separately
+
+The autonomous self-modification architecture has been proven in:
+**[self-modifying-lora](https://github.com/DRawson5570/self-modifying-lora)**
+- Gen 0 → Gen 2: 20% → 45% accuracy (+125% improvement!)
+- 21 minutes, 3 generations, consumer GPU
+- Self-triggered LoRA training works!
+
+**This repo** extends that architecture to stochastic environments (financial markets) - implementation TBD.
 
 ---
 
